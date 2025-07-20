@@ -13,8 +13,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  
 
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet" />
 
 
   <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css" />
@@ -25,86 +25,77 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-  
+
   <style>
     :where([class^="ri-"])::before {
       content: "\f3c2";
     }
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
   </style>
 </head>
 
-<body class="bg-white">
+<body class="bg-white overflow-x-hidden">
   <!-- Header -->
-  <header class="bg-white shadow-sm sticky top-0 z-50">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
     <nav class="py-4">
       <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-        <!-- Brand Name -->
-        <h1 class="text-2xl font-bold text-primary">Infinity Hydraulics</h1>
+        <h1 class="text-2xl font-bold text-blue-600">Infinity Hydraulics</h1>
 
-        <!-- Desktop Navigation -->
+        <!-- Desktop Nav -->
         <div class="hidden md:flex items-center space-x-8">
-          <a href="#" class="text-gray-700 hover:text-primary font-medium">Home</a>
-          <a href="#" class="text-gray-700 hover:text-primary font-medium">Products</a>
-          <a href="#" class="text-gray-700 hover:text-primary font-medium">About Us</a>
-          <a href="#" class="text-gray-700 hover:text-primary font-medium">Services</a>
-          <a href="#" class="text-gray-700 hover:text-primary font-medium">Contact</a>
-
-          <!-- Get Quote Button -->
-          <a href="#contact"
-            class="ml-4 inline-block px-5 py-2 bg-primary text-white text-sm font-semibold rounded-md shadow hover:bg-primary/90 transition">
+          <a href="/index.html" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+          <a href="/products.html" class="text-gray-700 hover:text-blue-600 font-medium">Products</a>
+          <a href="/about.html" class="text-gray-700 hover:text-blue-600 font-medium">About Us</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600 font-medium">Services</a>
+          <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+          <a href="tel:8308830595"
+            class="ml-4 inline-block px-5 py-2 bg-blue-600 text-white text-sm font-semibold rounded-md hover:bg-blue-700 transition inline-flex items-center gap-2">
+            <i class="ri-phone-line text-base"></i>
             Get Quote
           </a>
+
+
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button class="md:hidden p-2" id="mobile-menu-btn">
-          <div class="w-6 h-6 flex items-center justify-center">
-            <i class="ri-menu-line text-gray-700 text-xl"></i>
-          </div>
+        <!-- Mobile Toggle -->
+        <button class="md:hidden p-2" id="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="ri-menu-line text-gray-700 text-2xl"></i>
         </button>
       </div>
 
-      <!-- Mobile Navigation -->
+      <!-- Mobile Menu -->
       <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
         <div class="px-4 py-2 space-y-2">
-          <a href="#" class="block py-2 text-gray-700">Home</a>
-          <a href="#" class="block py-2 text-gray-700">Products</a>
-          <a href="#" class="block py-2 text-gray-700">About Us</a>
+          <a href="/index.html" class="block py-2 text-gray-700">Home</a>
+          <a href="/products.html" class="block py-2 text-gray-700">Products</a>
+          <a href="/about.html" class="block py-2 text-gray-700">About Us</a>
           <a href="#" class="block py-2 text-gray-700">Services</a>
-          <a href="#" class="block py-2 text-gray-700">Contact</a>
-          <a href="#contact" class="block py-2 text-primary font-semibold border-t border-gray-200 mt-2">
-            📝 Get Quote
+          <a href="#contact" class="block py-2 text-gray-700">Contact</a>
+          <!-- Get Quote Button -->
+          <div class="pt-3 border-t border-gray-200">
+         <a href="tel:8308830595"
+            class="ml-4 inline-block px-5 py-2 bg-blue-600 text-white text-sm font-semibold rounded-md hover:bg-blue-700 transition inline-flex items-center gap-2">
+            <i class="ri-phone-line text-base"></i>
+            Get Quote
           </a>
+
+          </div>
         </div>
       </div>
     </nav>
   </header>
-  <script>
-    const toggleBtn = document.getElementById("mobile-menu-btn");
-    const menu = document.getElementById("mobile-menu");
-    toggleBtn.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    });
-  </script>
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 
 
@@ -156,14 +147,22 @@
     </div>
 
     <!-- Buttons -->
-    <div class="flex gap-4 pt-2">
-      <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md">
-        Inquire
-      </button>
-      <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md">
-        Learn More
-      </button>
-    </div>
+<!-- Buttons -->
+<div class="flex gap-4 pt-2">
+  <!-- Inquire (Call) Button -->
+  <a href="tel:8308830595" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="fas fa-phone text-sm"></i>
+    Inquire
+  </a>
+
+  <!-- Learn More (About Section Scroll) -->
+  <a href="/about.html" class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="ri-information-line text-base"></i>
+    Learn More
+  </a>
+</div>
+
+
   </div>
 </div>
 
@@ -211,14 +210,23 @@
     </div>
 
     <!-- Buttons -->
-    <div class="flex gap-4 pt-2">
-      <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md">
-        Inquire
-      </button>
-      <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md">
-        Learn More
-      </button>
-    </div>
+    <!-- Buttons -->
+<!-- Buttons -->
+<div class="flex gap-4 pt-2">
+  <!-- Inquire (Call) Button -->
+  <a href="tel:8308830595" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="fas fa-phone text-sm"></i>
+    Inquire
+  </a>
+
+  <!-- Learn More (About Section Scroll) -->
+  <a href="/about.html" class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="ri-information-line text-base"></i>
+    Learn More
+  </a>
+</div>
+
+
   </div>
 </div>
 
@@ -254,10 +262,22 @@
       <div class="font-medium">Oil Capacity:</div>
       <div>150 LTR</div>
     </div>
-    <div class="flex gap-4 pt-2">
-      <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md">Inquire</button>
-      <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md">Learn More</button>
-    </div>
+<!-- Buttons -->
+<!-- Buttons -->
+<div class="flex gap-4 pt-2">
+  <!-- Inquire (Call) Button -->
+  <a href="tel:8308830595" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="fas fa-phone text-sm"></i>
+    Inquire
+  </a>
+
+  <!-- Learn More (About Section Scroll) -->
+  <a href="/about.html" class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="ri-information-line text-base"></i>
+    Learn More
+  </a>
+</div>
+
   </div>
 </div>
 
@@ -293,10 +313,23 @@
       <div class="font-medium">Oil Capacity:</div>
       <div>150 LTR</div>
     </div>
-    <div class="flex gap-4 pt-2">
-      <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md">Inquire</button>
-      <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md">Learn More</button>
-    </div>
+<!-- Buttons -->
+<!-- Buttons -->
+<div class="flex gap-4 pt-2">
+  <!-- Inquire (Call) Button -->
+  <a href="tel:8308830595" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="fas fa-phone text-sm"></i>
+    Inquire
+  </a>
+
+  <!-- Learn More (About Section Scroll) -->
+  <a href="/about.html" class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="ri-information-line text-base"></i>
+    Learn More
+  </a>
+</div>
+
+
   </div>
 </div>
 
@@ -332,10 +365,23 @@
       <div class="font-medium">Oil Capacity:</div>
       <div>120 – 150 LTR</div>
     </div>
-    <div class="flex gap-4 pt-2">
-      <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md">Inquire</button>
-      <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md">Learn More</button>
-    </div>
+<!-- Buttons -->
+<!-- Buttons -->
+<div class="flex gap-4 pt-2">
+  <!-- Inquire (Call) Button -->
+  <a href="tel:8308830595" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="fas fa-phone text-sm"></i>
+    Inquire
+  </a>
+
+  <!-- Learn More (About Section Scroll) -->
+  <a href="/about.html" class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="ri-information-line text-base"></i>
+    Learn More
+  </a>
+</div>
+
+
   </div>
 </div>
 
@@ -371,10 +417,23 @@
       <div class="font-medium">Oil Capacity:</div>
       <div>150 LTR</div>
     </div>
-    <div class="flex gap-4 pt-2">
-      <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md">Inquire</button>
-      <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md">Learn More</button>
-    </div>
+<!-- Buttons -->
+<!-- Buttons -->
+<div class="flex gap-4 pt-2">
+  <!-- Inquire (Call) Button -->
+  <a href="tel:8308830595" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="fas fa-phone text-sm"></i>
+    Inquire
+  </a>
+
+  <!-- Learn More (About Section Scroll) -->
+  <a href="/about.html" class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="ri-information-line text-base"></i>
+    Learn More
+  </a>
+</div>
+
+
   </div>
 </div>
 
@@ -411,10 +470,23 @@
       <div class="font-medium">Oil Capacity:</div>
       <div>150 LTR</div>
     </div>
-    <div class="flex gap-4 pt-2">
-      <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md">Inquire</button>
-      <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md">Learn More</button>
-    </div>
+<!-- Buttons -->
+<!-- Buttons -->
+<div class="flex gap-4 pt-2">
+  <!-- Inquire (Call) Button -->
+  <a href="tel:8308830595" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="fas fa-phone text-sm"></i>
+    Inquire
+  </a>
+
+  <!-- Learn More (About Section Scroll) -->
+  <a href="/about.html" class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="ri-information-line text-base"></i>
+    Learn More
+  </a>
+</div>
+
+
   </div>
 </div>
 
@@ -450,10 +522,23 @@
       <div class="font-medium">Oil Capacity:</div>
       <div>Up to 75 LTR</div>
     </div>
-    <div class="flex gap-4 pt-2">
-      <button class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md">Inquire</button>
-      <button class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md">Learn More</button>
-    </div>
+<!-- Buttons -->
+<!-- Buttons -->
+<div class="flex gap-4 pt-2">
+  <!-- Inquire (Call) Button -->
+  <a href="tel:8308830595" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="fas fa-phone text-sm"></i>
+    Inquire
+  </a>
+
+  <!-- Learn More (About Section Scroll) -->
+  <a href="/about.html" class="border border-blue-600 text-blue-600 hover:bg-blue-50 text-sm font-semibold py-2 px-6 rounded-md inline-flex items-center gap-2">
+    <i class="ri-information-line text-base"></i>
+    Learn More
+  </a>
+</div>
+
+
   </div>
 </div>
 
@@ -485,303 +570,302 @@
 
 
 
-
-
-
-
-
-
-<section class="py-20 bg-gradient-to-b from-white via-slate-100 to-white">
-  <div class="text-center mb-14">
-        <!-- Heading -->
+  <section class="py-20 bg-gradient-to-b from-white via-slate-100 to-white">
+    <div class="text-center mb-14">
+      <!-- Heading -->
       <div class="text-center mb-12">
         <h2 class="text-4xl font-bold mb-2">
-          Trusted By <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">508+ Happy Customers</span>
+          Trusted By <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">508+ Happy
+            Customers</span>
         </h2>
         <p class="text-gray-600 max-w-2xl mx-auto">
           We pride ourselves on quality, service, and long-standing relationships in the hydraulics industry.
         </p>
       </div>
 
-  <!-- Testimonial Marquee Slider -->
-  <div class="relative overflow-hidden">
-    <div
-      class="animate-marquee flex items-center gap-10 min-w-max group hover:[animation-play-state:paused] px-8 py-8 rounded-2xl shadow-xl bg-white/40 backdrop-blur-md border border-gray-200 max-w-7xl mx-auto">
+      <!-- Testimonial Marquee Slider -->
+      <div class="relative overflow-hidden">
+        <div
+          class="animate-marquee flex items-center gap-10 min-w-max group hover:[animation-play-state:paused] px-8 py-8 rounded-2xl shadow-xl bg-white/40 backdrop-blur-md border border-gray-200 max-w-7xl mx-auto">
 
-      <!-- Duplicate testimonial sets -->
-      <div class="flex items-center gap-10">
-        <!-- Testimonial Card -->
-        <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
-          <h4 class="text-gray-800 font-semibold">Ankit Sharma</h4>
-          <p class="text-sm text-gray-500 mb-2">Maintenance Engineer, Pune</p>
-          <p class="text-gray-700 text-sm">
-            Exceptional product durability and prompt service! Infinity Hydraulics is our go-to supplier.
-          </p>
-        </div>
+          <!-- Duplicate testimonial sets -->
+          <div class="flex items-center gap-10">
+            <!-- Testimonial Card -->
+            <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
+              <h4 class="text-gray-800 font-semibold">Ankit Sharma</h4>
+              <p class="text-sm text-gray-500 mb-2">Maintenance Engineer, Pune</p>
+              <p class="text-gray-700 text-sm">
+                Exceptional product durability and prompt service! Infinity Hydraulics is our go-to supplier.
+              </p>
+            </div>
 
-        <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
-          <h4 class="text-gray-800 font-semibold">Meera Joshi</h4>
-          <p class="text-sm text-gray-500 mb-2">Operations Manager, Mumbai</p>
-          <p class="text-gray-700 text-sm">
-            Their OEM hydraulic systems helped us scale operations smoothly. Highly professional team.
-          </p>
-        </div>
+            <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
+              <h4 class="text-gray-800 font-semibold">Meera Joshi</h4>
+              <p class="text-sm text-gray-500 mb-2">Operations Manager, Mumbai</p>
+              <p class="text-gray-700 text-sm">
+                Their OEM hydraulic systems helped us scale operations smoothly. Highly professional team.
+              </p>
+            </div>
 
-        <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
-          <h4 class="text-gray-800 font-semibold">Rajiv Menon</h4>
-          <p class="text-sm text-gray-500 mb-2">Procurement Head, Nagpur</p>
-          <p class="text-gray-700 text-sm">
-            Reliable performance and great after-sales support. We’ve partnered with them for years!
-          </p>
-        </div>
+            <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
+              <h4 class="text-gray-800 font-semibold">Rajiv Menon</h4>
+              <p class="text-sm text-gray-500 mb-2">Procurement Head, Nagpur</p>
+              <p class="text-gray-700 text-sm">
+                Reliable performance and great after-sales support. We’ve partnered with them for years!
+              </p>
+            </div>
 
-        <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
-          <h4 class="text-gray-800 font-semibold">Kavita Verma</h4>
-          <p class="text-sm text-gray-500 mb-2">Quality Lead, Nashik</p>
-          <p class="text-gray-700 text-sm">
-            Products are built to last! Their ISO compliance gives us full confidence in every order.
-          </p>
-        </div>
+            <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
+              <h4 class="text-gray-800 font-semibold">Kavita Verma</h4>
+              <p class="text-sm text-gray-500 mb-2">Quality Lead, Nashik</p>
+              <p class="text-gray-700 text-sm">
+                Products are built to last! Their ISO compliance gives us full confidence in every order.
+              </p>
+            </div>
 
-        <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
-          <h4 class="text-gray-800 font-semibold">Siddharth Kulkarni</h4>
-          <p class="text-sm text-gray-500 mb-2">Technical Manager, Thane</p>
-          <p class="text-gray-700 text-sm">
-            Quick installation, robust design, and excellent technical support. Highly recommended!
-          </p>
+            <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
+              <h4 class="text-gray-800 font-semibold">Siddharth Kulkarni</h4>
+              <p class="text-sm text-gray-500 mb-2">Technical Manager, Thane</p>
+              <p class="text-gray-700 text-sm">
+                Quick installation, robust design, and excellent technical support. Highly recommended!
+              </p>
+            </div>
+          </div>
+
+          <!-- Duplicate Set for Seamless Scroll -->
+          <div class="flex items-center gap-10">
+            <!-- Clone the same cards -->
+            <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
+              <h4 class="text-gray-800 font-semibold">Ankit Sharma</h4>
+              <p class="text-sm text-gray-500 mb-2">Maintenance Engineer, Pune</p>
+              <p class="text-gray-700 text-sm">
+                Exceptional product durability and prompt service! Infinity Hydraulics is our go-to supplier.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
+              <h4 class="text-gray-800 font-semibold">Meera Joshi</h4>
+              <p class="text-sm text-gray-500 mb-2">Operations Manager, Mumbai</p>
+              <p class="text-gray-700 text-sm">
+                Their OEM hydraulic systems helped us scale operations smoothly. Highly professional team.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
+              <h4 class="text-gray-800 font-semibold">Rajiv Menon</h4>
+              <p class="text-sm text-gray-500 mb-2">Procurement Head, Nagpur</p>
+              <p class="text-gray-700 text-sm">
+                Reliable performance and great after-sales support. We’ve partnered with them for years!
+              </p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
+              <h4 class="text-gray-800 font-semibold">Kavita Verma</h4>
+              <p class="text-sm text-gray-500 mb-2">Quality Lead, Nashik</p>
+              <p class="text-gray-700 text-sm">
+                Products are built to last! Their ISO compliance gives us full confidence in every order.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
+              <h4 class="text-gray-800 font-semibold">Siddharth Kulkarni</h4>
+              <p class="text-sm text-gray-500 mb-2">Technical Manager, Thane</p>
+              <p class="text-gray-700 text-sm">
+                Quick installation, robust design, and excellent technical support. Highly recommended!
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
+  </section>
 
-      <!-- Duplicate Set for Seamless Scroll -->
-      <div class="flex items-center gap-10">
-        <!-- Clone the same cards -->
-        <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
-          <h4 class="text-gray-800 font-semibold">Ankit Sharma</h4>
-          <p class="text-sm text-gray-500 mb-2">Maintenance Engineer, Pune</p>
-          <p class="text-gray-700 text-sm">
-            Exceptional product durability and prompt service! Infinity Hydraulics is our go-to supplier.
-          </p>
-        </div>
+  <style>
+    @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
 
-        <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
-          <h4 class="text-gray-800 font-semibold">Meera Joshi</h4>
-          <p class="text-sm text-gray-500 mb-2">Operations Manager, Mumbai</p>
-          <p class="text-gray-700 text-sm">
-            Their OEM hydraulic systems helped us scale operations smoothly. Highly professional team.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
-          <h4 class="text-gray-800 font-semibold">Rajiv Menon</h4>
-          <p class="text-sm text-gray-500 mb-2">Procurement Head, Nagpur</p>
-          <p class="text-gray-700 text-sm">
-            Reliable performance and great after-sales support. We’ve partnered with them for years!
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
-          <h4 class="text-gray-800 font-semibold">Kavita Verma</h4>
-          <p class="text-sm text-gray-500 mb-2">Quality Lead, Nashik</p>
-          <p class="text-gray-700 text-sm">
-            Products are built to last! Their ISO compliance gives us full confidence in every order.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl shadow-md p-6 min-w-[320px] max-w-[320px]">
-          <h4 class="text-gray-800 font-semibold">Siddharth Kulkarni</h4>
-          <p class="text-sm text-gray-500 mb-2">Technical Manager, Thane</p>
-          <p class="text-gray-700 text-sm">
-            Quick installation, robust design, and excellent technical support. Highly recommended!
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<style>
-  @keyframes marquee {
-    0% {
-      transform: translateX(0%);
+      100% {
+        transform: translateX(-50%);
+      }
     }
-    100% {
-      transform: translateX(-50%);
+
+    .animate-marquee {
+      animation: marquee 30s linear infinite;
     }
-  }
-
-  .animate-marquee {
-    animation: marquee 30s linear infinite;
-  }
-</style>
+  </style>
 
 
 
 
-<!-- Contact Section -->
-<section id="contact" class="bg-white text-gray-800 py-20 px-6">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+  <!-- Contact Section -->
+  <section id="contact" class="bg-white text-gray-800 py-20 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
-    <!-- LEFT CARD - Contact Info -->
-    <div class="bg-white shadow-lg rounded-xl p-8 space-y-8" data-aos="fade-right">
-      <h2 class="text-4xl font-bold text-gray-900">Let’s Connect</h2>
-      <p class="text-lg text-gray-600">
-        We’re here to help! Contact us through any of the ways below or send a direct message using the form.
-      </p>
+      <!-- LEFT CARD - Contact Info -->
+      <div class="bg-white shadow-lg rounded-xl p-8 space-y-8" data-aos="fade-right">
+        <h2 class="text-4xl font-bold text-gray-900">Let’s Connect</h2>
+        <p class="text-lg text-gray-600">
+          We’re here to help! Contact us through any of the ways below or send a direct message using the form.
+        </p>
 
-      <!-- Address -->
-      <div class="flex items-start space-x-4">
-        <div class="text-blue-600 text-2xl">
-          <i class="fas fa-location-dot"></i>
+        <!-- Address -->
+        <div class="flex items-start space-x-4">
+          <div class="text-blue-600 text-2xl">
+            <i class="fas fa-location-dot"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold">Office Address</h4>
+            <p class="text-gray-600">
+              Phuge Industrial Hub,
+              Near Magzine Circle,
+              Bhosari - 411039
+            </p>
+          </div>
         </div>
-        <div>
-          <h4 class="text-lg font-semibold">Office Address</h4>
-          <p class="text-gray-600">
-            Phuge Industrial Hub,
-            Near Magzine Circle,
-            Bhosari - 411039
-          </p>
+
+        <!-- Phone -->
+        <div class="flex items-start space-x-4">
+          <div class="text-blue-600 text-2xl">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold">Call Us</h4>
+            <p class="text-gray-600">8308830595 / 9763419537</p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="flex items-start space-x-4">
+          <div class="text-blue-600 text-2xl">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold">Email</h4>
+            <p class="text-gray-600">info@infinityhydraulics.com</p>
+          </div>
         </div>
       </div>
 
-      <!-- Phone -->
-      <div class="flex items-start space-x-4">
-        <div class="text-blue-600 text-2xl">
-          <i class="fas fa-phone"></i>
+      <!-- RIGHT CARD - Contact Form -->
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+        class="bg-white shadow-lg rounded-xl p-8 space-y-6" data-aos="fade-left">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Send a Message</h3>
+
+        <input type="text" name="name" placeholder="Your Name" required
+          class="w-full px-4 py-3 rounded-md bg-white text-gray-900 border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+
+        <input type="email" name="email" placeholder="Your Email" required
+          class="w-full px-4 py-3 rounded-md bg-white text-gray-900 border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+
+        <input type="text" name="subject" placeholder="Subject"
+          class="w-full px-4 py-3 rounded-md bg-white text-gray-900 border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
+
+        <textarea name="message" rows="5" placeholder="Your Message" required
+          class="w-full px-4 py-3 rounded-md bg-white text-gray-900 border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"></textarea>
+
+        <button type="submit"
+          class="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-400 text-white rounded-full font-semibold shadow-md hover:scale-105 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- AOS JS CDN (add before </body>) -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+
+      <!-- Company Info -->
+      <div>
+        <h2 class="text-2xl font-bold text-white">Infinity Hydraulics</h2>
+        <p class="mt-4 text-gray-300">
+          A trusted name in hydraulic solutions and services, offering industry-leading quality, environmental
+          commitment, and reliable equipment since 2018.
+        </p>
+
+        <!-- Social Media Icons -->
+        <div class="flex space-x-4 mt-6 text-2xl">
+          <a href="#" class="text-blue-500 hover:scale-110 transition"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-black bg-white rounded-full p-1 hover:scale-110 transition"><i
+              class="fab fa-x-twitter"></i></a>
+          <a href="#" class="text-pink-500 hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-blue-400 hover:scale-110 transition"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="text-red-500 hover:scale-110 transition"><i class="fab fa-youtube"></i></a>
         </div>
-        <div>
-          <h4 class="text-lg font-semibold">Call Us</h4>
-          <p class="text-gray-600">8308830595 / 9763419537</p>
+
+        <!-- Connect With Us Button -->
+        <!-- Connect With Us Button -->
+        <div class="mt-6">
+          <a href="#contact"
+            class="inline-flex items-center px-6 py-3 rounded-full border-2 border-blue-500 text-blue-600 font-medium hover:bg-blue-600 hover:text-white transition">
+            Connect With Us
+            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
         </div>
+
       </div>
 
-      <!-- Email -->
-      <div class="flex items-start space-x-4">
-        <div class="text-blue-600 text-2xl">
-          <i class="fas fa-envelope"></i>
-        </div>
-        <div>
-          <h4 class="text-lg font-semibold">Email</h4>
-          <p class="text-gray-600">info@infinityhydraulics.com</p>
-        </div>
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+          <li><a href="#" class="hover:text-yellow-400">About Us</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Products</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Services</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
+          <li><a href="#" class="hover:text-yellow-400">Career</a></li>
+        </ul>
+      </div>
+
+      <!-- Products -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Products</h3>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="#" class="hover:text-blue-400">Hydraulic Pumps</a></li>
+          <li><a href="#" class="hover:text-blue-400">Hydraulic Cylinders</a></li>
+          <li><a href="#" class="hover:text-blue-400">Hydraulic Valves</a></li>
+          <li><a href="#" class="hover:text-blue-400">Power Packs</a></li>
+          <li><a href="#" class="hover:text-blue-400">Hoses & Fittings</a></li>
+          <li><a href="#" class="hover:text-blue-400">Filtration Systems</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h3 class="text-lg font-semibold text-white mb-4">Contact Info</h3>
+        <p class="text-gray-300">
+          Phuge Industrial Hub,<br>
+          Near Magzine Circle,<br>
+          Bhosari - 411039
+        </p>
+        <p class="mt-2 text-gray-300">
+          <strong>Phone:</strong> 8308830595 / 9763419537
+        </p>
+        <p class="mt-2 text-gray-300">
+          <strong>Email:</strong> info@infinityhydraulics.com
+        </p>
       </div>
     </div>
 
-    <!-- RIGHT CARD - Contact Form -->
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
-          class="bg-white shadow-lg rounded-xl p-8 space-y-6" data-aos="fade-left">
-      <h3 class="text-2xl font-semibold text-gray-800 mb-2">Send a Message</h3>
-
-      <input type="text" name="name" placeholder="Your Name" required
-             class="w-full px-4 py-3 rounded-md bg-white text-gray-900 border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
-
-      <input type="email" name="email" placeholder="Your Email" required
-             class="w-full px-4 py-3 rounded-md bg-white text-gray-900 border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
-
-      <input type="text" name="subject" placeholder="Subject"
-             class="w-full px-4 py-3 rounded-md bg-white text-gray-900 border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none">
-
-      <textarea name="message" rows="5" placeholder="Your Message" required
-                class="w-full px-4 py-3 rounded-md bg-white text-gray-900 border border-gray-300 focus:ring-2 focus:ring-blue-400 focus:outline-none"></textarea>
-
-      <button type="submit"
-              class="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-400 text-white rounded-full font-semibold shadow-md hover:scale-105 transition">
-        Send Message
-      </button>
-    </form>
-  </div>
-</section>
-
-<!-- AOS JS CDN (add before </body>) -->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000,
-    once: true
-  });
-</script>
-
-
-<footer class="bg-gray-900 text-white py-16">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
-    
-    <!-- Company Info -->
-    <div>
-      <h2 class="text-2xl font-bold text-white">Infinity Hydraulics</h2>
-      <p class="mt-4 text-gray-300">
-        A trusted name in hydraulic solutions and services, offering industry-leading quality, environmental commitment, and reliable equipment since 2018.
-      </p>
-
-      <!-- Social Media Icons -->
-      <div class="flex space-x-4 mt-6 text-2xl">
-        <a href="#" class="text-blue-500 hover:scale-110 transition"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="text-black bg-white rounded-full p-1 hover:scale-110 transition"><i class="fab fa-x-twitter"></i></a>
-        <a href="#" class="text-pink-500 hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-blue-400 hover:scale-110 transition"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#" class="text-red-500 hover:scale-110 transition"><i class="fab fa-youtube"></i></a>
-      </div>
-
-      <!-- Connect With Us Button -->
-       <!-- Connect With Us Button -->
-      <div class="mt-6">
-        <a href="#contact" class="inline-flex items-center px-6 py-3 rounded-full border-2 border-blue-500 text-blue-600 font-medium hover:bg-blue-600 hover:text-white transition">
-          Connect With Us
-          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
-        </a>
-      </div>
-      
+    <!-- Footer Bottom -->
+    <div class="mt-12 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+      © 2025 Infinity Hydraulics. All rights reserved.
     </div>
-
-    <!-- Quick Links -->
-    <div>
-      <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
-      <ul class="space-y-2 text-gray-300">
-        <li><a href="#" class="hover:text-yellow-400">Home</a></li>
-        <li><a href="#" class="hover:text-yellow-400">About Us</a></li>
-        <li><a href="#" class="hover:text-yellow-400">Products</a></li>
-        <li><a href="#" class="hover:text-yellow-400">Services</a></li>
-        <li><a href="#" class="hover:text-yellow-400">Contact</a></li>
-        <li><a href="#" class="hover:text-yellow-400">Career</a></li>
-      </ul>
-    </div>
-
-    <!-- Products -->
-    <div>
-      <h3 class="text-lg font-semibold text-white mb-4">Products</h3>
-      <ul class="space-y-2 text-gray-300">
-        <li><a href="#" class="hover:text-blue-400">Hydraulic Pumps</a></li>
-        <li><a href="#" class="hover:text-blue-400">Hydraulic Cylinders</a></li>
-        <li><a href="#" class="hover:text-blue-400">Hydraulic Valves</a></li>
-        <li><a href="#" class="hover:text-blue-400">Power Packs</a></li>
-        <li><a href="#" class="hover:text-blue-400">Hoses & Fittings</a></li>
-        <li><a href="#" class="hover:text-blue-400">Filtration Systems</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Info -->
-    <div>
-      <h3 class="text-lg font-semibold text-white mb-4">Contact Info</h3>
-      <p class="text-gray-300">
-        Phuge Industrial Hub,<br>
-        Near Magzine Circle,<br>
-        Bhosari - 411039
-      </p>
-      <p class="mt-2 text-gray-300">
-        <strong>Phone:</strong> 8308830595 / 9763419537
-      </p>
-      <p class="mt-2 text-gray-300">
-        <strong>Email:</strong> info@infinityhydraulics.com
-      </p>
-    </div>
-  </div>
-
-  <!-- Footer Bottom -->
-  <div class="mt-12 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
-    © 2025 Infinity Hydraulics. All rights reserved.
-  </div>
-</footer>
+  </footer>
   <!-- WhatsApp Floating Button -->
   <div class="fixed bottom-6 right-6 z-50">
     <button
@@ -832,3 +916,45 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
