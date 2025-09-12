@@ -1,0 +1,199 @@
+
+
+  <!-- HERO SECTION WITH 4 SLIDES -->
+<section class="relative w-full min-h-screen md:min-h-[560px] flex items-center overflow-hidden">
+  <!-- Slides -->
+  <div id="hero-slides" class="absolute inset-0">
+    <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100 hero-slide"
+         style="background-image: url('assets/hero/hero1.jpg');"></div>
+    <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 hero-slide"
+         style="background-image: url('assets/hero/hero2.jpg');"></div>
+    <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 hero-slide"
+         style="background-image: url('assets/hero/hero3.jpg');"></div>
+    <div class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0 hero-slide"
+         style="background-image: url('assets/hero/hero4.jpg');"></div>
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-6xl mx-auto px-6 md:px-12 lg:px-16 w-full">
+    <div class="grid grid-cols-1 md:grid-cols-2 items-center">
+      <div class="py-16 md:py-24 lg:py-28">
+        <h1 class="text-white font-extrabold leading-tight text-3xl sm:text-4xl md:text-5xl lg:text-6xl drop-shadow-lg">
+          Industrial Hydraulic Baling<br class="hidden lg:block"> Press
+        </h1>
+
+        <p class="mt-4 text-white/85 text-sm sm:text-base md:text-lg max-w-xl">
+          High-Performance Baling Solutions for Industrial Applications
+        </p>
+
+        <div class="mt-6 flex gap-3 items-center">
+          <a href="#products"
+             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md shadow-lg text-sm sm:text-base font-medium bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:scale-[1.01] transition">
+            Explore Products
+          </a>
+
+          <a href="#quote"
+             class="inline-flex items-center gap-2 px-4 py-2.5 rounded-md text-sm sm:text-base font-medium border border-white/30 text-white/95 bg-white/10 hover:bg-white/20 transition">
+            Get Quote
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dots -->
+  <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3" id="hero-dots">
+    <button class="w-3 h-3 rounded-full bg-white hero-dot"></button>
+    <button class="w-3 h-3 rounded-full bg-white/50 hero-dot"></button>
+    <button class="w-3 h-3 rounded-full bg-white/50 hero-dot"></button>
+    <button class="w-3 h-3 rounded-full bg-white/50 hero-dot"></button>
+  </div>
+</section>
+
+<!-- JS for Slide Rotation -->
+<script>
+  const slides = document.querySelectorAll('#hero-slides > div');
+  const dots = document.querySelectorAll('#hero-dots > button');
+  let current = 0;
+  const interval = 5000; // 5 seconds
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.opacity = i === index ? '1' : '0';
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('bg-white', i === index);
+      dot.classList.toggle('bg-white/50', i !== index);
+    });
+    current = index;
+  }
+
+  function nextSlide() {
+    let next = (current + 1) % slides.length;
+    showSlide(next);
+  }
+
+  let timer = setInterval(nextSlide, interval);
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      clearInterval(timer);
+      showSlide(i);
+      timer = setInterval(nextSlide, interval);
+    });
+  });
+</script>
+
+
+
+
+
+  <section class="pt-32 pb-20 bg-gradient-to-br from-white via-purple-50 to-blue-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+
+      <!-- Left Content -->
+      <div>
+        <span class="inline-block bg-blue-100 text-blue-600 font-semibold text-sm px-4 py-1 rounded-full mb-6">
+          INDUSTRY SOLUTIONS FOR EVERYONE
+        </span>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
+          We're Engineering the Power<br />
+          of <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Hydraulics!</span>
+        </h1>
+        <p class="text-lg text-gray-600 mb-8">
+          Join 1000+ businesses powered by Infinity Hydraulics.<br /> Precision. Strength. Innovation.
+        </p>
+
+        <!-- Customer avatars + stats -->
+        <div class="flex items-center space-x-4 mb-8">
+          <div class="flex -space-x-2">
+            <img src="https://randomuser.me/api/portraits/men/31.jpg" alt=""
+              class="w-10 h-10 rounded-full border-2 border-white" />
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt=""
+              class="w-10 h-10 rounded-full border-2 border-white" />
+            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt=""
+              class="w-10 h-10 rounded-full border-2 border-white" />
+          </div>
+          <div>
+            <p class="text-sm font-semibold text-gray-800">
+              Trusted by 1000+ clients across industries
+            </p>
+            <p class="text-sm text-gray-500">Delivering quality-driven excellence since 2018</p>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <!-- Buttons -->
+        <div class="flex flex-wrap gap-4">
+
+          <a href="products.html"
+          class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow inline-flex items-center gap-2">
+            <i class="ri-store-2-line	 text-lg"></i> 
+            Products
+          </a>
+
+          <!-- Get Quote Button with customer service icon -->
+          <a href="tel:8308830595"
+            class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow inline-flex items-center gap-2">            <i class="ri-customer-service-2-line text-lg"></i>
+            Get Quote
+          </a>
+
+
+        </div>
+
+      </div>
+
+      <!-- Right Image -->
+      <!-- Carousel Container -->
+      <div class="relative w-full overflow-hidden rounded-xl shadow-lg h-[400px]">
+        <!-- Image Slides -->
+        <div id="carousel-images" class="w-full h-full relative">
+          <img
+            src="https://readdy.ai/api/search-image?query=modern%20hydraulic%20manufacturing%20plant%20interior%2C%20blue%20and%20white%20theme%2C%20clean%20industrial%20space%20with%20automated%20machinery%2C%20quality%20control%20testing%20area%2C%20professional%20lighting%2C%20left%20side%20clear%20space&width=1920&height=1080&seq=hero3&orientation=landscape"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100" />
+          <img
+            src="https://readdy.ai/api/search-image?query=industrial%20hydraulic%20testing%20facility%20with%20advanced%20machinery%2C%20blue%20and%20white%20color%20scheme%2C%20professional%20lighting%2C%20engineers%20working%20on%20hydraulic%20equipment%2C%20modern%20industrial%20environment%2C%20left%20side%20clear%20for%20text&width=1920&height=1080&seq=hero2&orientation=landscape"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
+          <img
+            src="https://readdy.ai/api/search-image?query=modern%20industrial%20hydraulic%20machinery%20workshop%20with%20blue%20and%20white%20color%20scheme%2C%20professional%20lighting%2C%20clean%20background%20with%20hydraulic%20pumps%20and%20cylinders%2C%20left%20side%20white%20space%20for%20text%20overlay%2C%20industrial%20equipment%20on%20right%20side%2C%20high-tech%20manufacturing%20environment&width=1920&height=1080&seq=hero1&orientation=landscape"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
+          <img src="assets/products/hero1.jpg"
+            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    const slides = document.querySelectorAll('#carousel-images img');
+    let currentIndex = 0;
+
+    setInterval(() => {
+      slides.forEach((img, i) => {
+        img.style.opacity = i === currentIndex ? '1' : '0';
+      });
+      currentIndex = (currentIndex + 1) % slides.length;
+    }, 3000); // Change image every 3 seconds
+  </script>
+
+
+
+
+
+  <section class="py-20 bg-gradient-to-b from-white via-slate-100 to-white">
+    <div class="text-center mb-14">
+      <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 tracking-tight inline">
+        Our Trusted Clients
+      </h2>
+      <span class="text-lg md:text-xl text-gray-600 inline-block ml-3">
+        — More than
+        <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+          550+
+        </span>
+        happy and satisfied customers across industries
+      </span>
+    </div>

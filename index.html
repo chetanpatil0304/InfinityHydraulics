@@ -94,94 +94,182 @@
 
 
 
-  <section class="pt-32 pb-20 bg-gradient-to-br from-white via-purple-50 to-blue-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
-
-      <!-- Left Content -->
-      <div>
-        <span class="inline-block bg-blue-100 text-blue-600 font-semibold text-sm px-4 py-1 rounded-full mb-6">
-          INDUSTRY SOLUTIONS FOR EVERYONE
-        </span>
-        <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-6">
-          We're Engineering the Power<br />
-          of <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Hydraulics!</span>
-        </h1>
-        <p class="text-lg text-gray-600 mb-8">
-          Join 1000+ businesses powered by Infinity Hydraulics.<br /> Precision. Strength. Innovation.
+  <section class="relative w-full h-[90vh] overflow-hidden" aria-label="Hero slider">
+  <div id="hero-track" class="flex h-full transition-transform duration-700 will-change-transform">
+    <!-- Slide 1 -->
+    <div
+      class="w-full h-full flex-shrink-0 relative bg-cover bg-center"
+      style="background-image: url('/assets/hero/2.svg')"
+      role="group"
+      aria-label="Slide 1: Precision Hydraulic Components">
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="absolute inset-0 flex flex-col justify-center items-start text-white px-6 md:px-14 lg:px-24">
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">Vertical Baling Machines</h1>
+        <p class="mt-3 text-sm md:text-lg lg:text-xl max-w-xl">
+          Turn waste into value with Vertical Baling Machines – smart, efficient & sustainable
         </p>
-
-        <!-- Customer avatars + stats -->
-        <div class="flex items-center space-x-4 mb-8">
-          <div class="flex -space-x-2">
-            <img src="https://randomuser.me/api/portraits/men/31.jpg" alt=""
-              class="w-10 h-10 rounded-full border-2 border-white" />
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt=""
-              class="w-10 h-10 rounded-full border-2 border-white" />
-            <img src="https://randomuser.me/api/portraits/women/33.jpg" alt=""
-              class="w-10 h-10 rounded-full border-2 border-white" />
-          </div>
-          <div>
-            <p class="text-sm font-semibold text-gray-800">
-              Trusted by 1000+ clients across industries
-            </p>
-            <p class="text-sm text-gray-500">Delivering quality-driven excellence since 2018</p>
-          </div>
-        </div>
-
-        <!-- Buttons -->
-        <!-- Buttons -->
-        <div class="flex flex-wrap gap-4">
-
-          <a href="products.html"
-          class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow inline-flex items-center gap-2">
-            <i class="ri-store-2-line	 text-lg"></i> 
-            Products
-          </a>
-
-          <!-- Get Quote Button with customer service icon -->
-          <a href="tel:8308830595"
-            class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow inline-flex items-center gap-2">            <i class="ri-customer-service-2-line text-lg"></i>
-            Get Quote
-          </a>
-
-
-        </div>
-
-      </div>
-
-      <!-- Right Image -->
-      <!-- Carousel Container -->
-      <div class="relative w-full overflow-hidden rounded-xl shadow-lg h-[400px]">
-        <!-- Image Slides -->
-        <div id="carousel-images" class="w-full h-full relative">
-          <img
-            src="https://readdy.ai/api/search-image?query=modern%20hydraulic%20manufacturing%20plant%20interior%2C%20blue%20and%20white%20theme%2C%20clean%20industrial%20space%20with%20automated%20machinery%2C%20quality%20control%20testing%20area%2C%20professional%20lighting%2C%20left%20side%20clear%20space&width=1920&height=1080&seq=hero3&orientation=landscape"
-            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100" />
-          <img
-            src="https://readdy.ai/api/search-image?query=industrial%20hydraulic%20testing%20facility%20with%20advanced%20machinery%2C%20blue%20and%20white%20color%20scheme%2C%20professional%20lighting%2C%20engineers%20working%20on%20hydraulic%20equipment%2C%20modern%20industrial%20environment%2C%20left%20side%20clear%20for%20text&width=1920&height=1080&seq=hero2&orientation=landscape"
-            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
-          <img
-            src="https://readdy.ai/api/search-image?query=modern%20industrial%20hydraulic%20machinery%20workshop%20with%20blue%20and%20white%20color%20scheme%2C%20professional%20lighting%2C%20clean%20background%20with%20hydraulic%20pumps%20and%20cylinders%2C%20left%20side%20white%20space%20for%20text%20overlay%2C%20industrial%20equipment%20on%20right%20side%2C%20high-tech%20manufacturing%20environment&width=1920&height=1080&seq=hero1&orientation=landscape"
-            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
-          <img src="assets/products/hero1.jpg"
-            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0" />
+        <div class="mt-6 flex gap-4">
+          <a href="#products" class="px-5 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold shadow-blue">Explore Products</a>
+          <a href="#quote" class="px-5 py-3 border border-white hover:bg-white hover:text-black rounded-lg font-semibold shadow-blue">Get Quote</a>
         </div>
       </div>
-
     </div>
-  </section>
 
-  <script>
-    const slides = document.querySelectorAll('#carousel-images img');
-    let currentIndex = 0;
+    <!-- Slide 2 -->
+    <div
+      class="w-full h-full flex-shrink-0 relative bg-cover bg-center"
+      style="background-image: url('/assets/hero/3.svg')"
+      role="group"
+      aria-label="Slide 2: Advanced Hydraulic Solutions">
+      <div class="absolute inset-0 bg-black/45"></div>
+      <div class="absolute inset-0 flex flex-col justify-center items-start text-white px-6 md:px-14 lg:px-24">
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">Vertical Baling Machines</h2>
+        <p class="mt-3 text-sm md:text-lg lg:text-xl max-w-xl">Compact the clutter, maximize the space – choose Vertical Balers for smart waste management</p>
+        <div class="mt-6 flex gap-4">
+          <a href="#products" class="px-5 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold shadow-blue">Explore Products</a>
+          <a href="#quote" class="px-5 py-3 border border-white hover:bg-white hover:text-black rounded-lg font-semibold shadow-blue">Get Quote</a>
+        </div>
+      </div>
+    </div>
 
-    setInterval(() => {
-      slides.forEach((img, i) => {
-        img.style.opacity = i === currentIndex ? '1' : '0';
+    <!-- Slide 3 -->
+    <div
+      class="w-full h-full flex-shrink-0 relative bg-cover bg-center"
+      style="background-image: url('/assets/hero/2.svg')"
+      role="group"
+      aria-label="Slide 3: Quality That Lasts">
+      <div class="absolute inset-0 bg-black/45"></div>
+      <div class="absolute inset-0 flex flex-col justify-center items-start text-white px-6 md:px-14 lg:px-24">
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">Quality That Lasts</h2>
+        <p class="mt-3 text-sm md:text-lg lg:text-xl max-w-xl">Sustainability starts here: Vertical Baling Machines for a cleaner tomorrow</p>
+        <div class="mt-6 flex gap-4">
+          <a href="#products" class="px-5 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold shadow-blue">Explore Products</a>
+          <a href="#quote" class="px-5 py-3 border border-white hover:bg-white hover:text-black rounded-lg font-semibold shadow-blue">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div
+      class="w-full h-full flex-shrink-0 relative bg-cover bg-center"
+      style="background-image: url('/assets/hero/3.svg')"
+      role="group"
+      aria-label="Slide 4: Custom Hydraulic Engineering">
+      <div class="absolute inset-0 bg-black/45"></div>
+      <div class="absolute inset-0 flex flex-col justify-center items-start text-white px-6 md:px-14 lg:px-24">
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">Custom Hydraulic Engineering</h2>
+        <p class="mt-3 text-sm md:text-lg lg:text-xl max-w-xl">Stronger, faster, greener – that’s the power of Vertical Baling Machines</p>
+        <div class="mt-6 flex gap-4">
+          <a href="#products" class="px-5 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold shadow-blue">Explore Products</a>
+          <a href="#quote" class="px-5 py-3 border border-white hover:bg-white hover:text-black rounded-lg font-semibold shadow-blue">Get Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Dots -->
+  <div id="hero-dots" class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex gap-3" role="tablist" aria-label="Slider dots">
+    <button data-index="0" class="w-3 h-3 rounded-full bg-blue-600 shadow-blue"></button>
+    <button data-index="1" class="w-3 h-3 rounded-full bg-gray-400"></button>
+    <button data-index="2" class="w-3 h-3 rounded-full bg-gray-400"></button>
+    <button data-index="3" class="w-3 h-3 rounded-full bg-gray-400"></button>
+  </div>
+</section>
+<script>
+  (function () {
+    const track = document.getElementById('hero-track');
+    if (!track) return;
+
+    const slides = Array.from(track.children);
+    const prevBtn = document.getElementById('hero-prev');
+    const nextBtn = document.getElementById('hero-next');
+    const dots = Array.from(document.querySelectorAll('#hero-dots button'));
+    let index = 0;
+    const total = slides.length;
+    let autoplayInterval;
+    const AUTOPLAY_MS = 3000; // 3 sec
+
+    function goTo(i) {
+      index = (i + total) % total;
+      track.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach((d, idx) => {
+        d.classList.remove('bg-blue-600', 'shadow-blue');
+        d.classList.add('bg-gray-400');
+        if (idx === index) {
+          d.classList.remove('bg-gray-400');
+          d.classList.add('bg-blue-600', 'shadow-blue');
+        }
       });
-      currentIndex = (currentIndex + 1) % slides.length;
-    }, 3000); // Change image every 3 seconds
-  </script>
+    }
+
+    // Only attach prev/next if they exist
+    if (prevBtn) prevBtn.addEventListener('click', () => { goTo(index - 1); resetAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { goTo(index + 1); resetAutoplay(); });
+
+    // Dots (guard in case none exist)
+    if (dots.length) {
+      dots.forEach(d => d.addEventListener('click', e => {
+        const idx = Number(e.currentTarget.dataset.index);
+        if (!Number.isNaN(idx)) {
+          goTo(idx);
+          resetAutoplay();
+        }
+      }));
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayInterval = setInterval(() => goTo(index + 1), AUTOPLAY_MS);
+    }
+    function stopAutoplay() {
+      if (autoplayInterval) clearInterval(autoplayInterval);
+      autoplayInterval = null;
+    }
+    function resetAutoplay() {
+      stopAutoplay();
+      startAutoplay();
+    }
+
+    // Pause on hover & resume on leave
+    const heroSection = document.querySelector('section[aria-label="Hero slider"]');
+    if (heroSection) {
+      heroSection.addEventListener('mouseenter', stopAutoplay);
+      heroSection.addEventListener('mouseleave', startAutoplay);
+      // also pause on focus for accessibility
+      heroSection.addEventListener('focusin', stopAutoplay);
+      heroSection.addEventListener('focusout', startAutoplay);
+    }
+
+    // touch: allow swipe left/right (basic)
+    let touchStartX = 0;
+    let touchEndX = 0;
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, {passive: true});
+    track.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const dx = touchEndX - touchStartX;
+      const threshold = 40; // px
+      if (dx > threshold) { goTo(index - 1); resetAutoplay(); }
+      else if (dx < -threshold) { goTo(index + 1); resetAutoplay(); }
+    });
+
+    // initialize
+    goTo(0);
+    startAutoplay();
+  })();
+</script>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -200,6 +288,8 @@
         happy and satisfied customers across industries
       </span>
     </div>
+
+
 
     <!-- Logo Slider Container -->
     <div class="relative overflow-hidden">
@@ -257,360 +347,350 @@
 
 
   <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+  <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
 
-      <!-- Left Image -->
-      <div class="flex justify-center" data-aos="fade-right" data-aos-duration="1000">
-        <img src="assets/hero/about.svg" alt="Main Image"
-          class="rounded-xl shadow-lg w-full max-w-md md:max-w-lg object-cover" />
-      </div>
+    <!-- Left Image -->
+    <div class="flex justify-center" data-aos="fade-right" data-aos-duration="1000">
+      <img src="/assets/logo/logo.svg" alt="Infinity Hydraulics"
+        class="rounded-xl shadow-lg w-full max-w-md md:max-w-lg object-cover" />
+    </div>
 
-      <!-- Right Content -->
-      <div class="pt-10 lg:pt-0" data-aos="fade-left" data-aos-duration="1000">
-        <span class="inline-block px-4 py-1 text-sm font-semibold bg-blue-100 text-blue-600 rounded-full mb-4">
-          WHY CHOOSE US
-        </span>
-        <h2 class="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-          Certified Precision, Trusted Globally
-        </h2>
+    <!-- Right Content -->
+    <div class="pt-10 lg:pt-0" data-aos="fade-left" data-aos-duration="1000">
+      <span class="inline-block px-4 py-1 text-sm font-semibold bg-blue-100 text-blue-600 rounded-full mb-4">
+        WHY CHOOSE INFINITY HYDRAULICS
+      </span>
+      <h2 class="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+        We Minimize Your Efforts
+      </h2>
 
-        <p class="text-gray-600 leading-relaxed mb-6">
-          At <strong>Infinity Hydraulics</strong>, we deliver quality products that meet global standards.
-          Whether it's ISO 9001:2015 certification or OEM-grade parts, our goal is to provide performance,
-          consistency, and innovation in every application.
-        </p>
+      <p class="text-gray-600 leading-relaxed mb-6">
+        At <strong>INFINITY HYDRAULICS</strong>, we don’t just build machines — we build trust, value, and long-term performance.
 
-        <!-- Features -->
-        <div class="space-y-6">
-          <!-- ISO -->
-          <div class="flex items-start space-x-4">
-            <div class="w-10 h-10 bg-blue-100 text-blue-600 flex items-center justify-center rounded-full text-xl">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-800">ISO 9001:2015 Certified</h4>
-              <p class="text-sm text-gray-600">
-                We are ISO certified, ensuring premium quality control, efficiency, and safety across all operations.
-              </p>
-            </div>
+      <!-- Features -->
+      <div class="space-y-6">
+        <!-- Quality First -->
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 bg-blue-100 text-blue-600 flex items-center justify-center rounded-full text-lg font-bold">
+            1
           </div>
-
-          <!-- OEM -->
-          <div class="flex items-start space-x-4">
-            <div class="w-10 h-10 bg-purple-100 text-purple-600 flex items-center justify-center rounded-full text-xl">
-              <i class="fas fa-industry"></i>
-            </div>
-            <div>
-              <h4 class="font-semibold text-gray-800">OEM Expertise</h4>
-              <p class="text-sm text-gray-600">
-                We supply OEM-grade hydraulic systems and components trusted by industries across the country.
-              </p>
-            </div>
+          <div>
+            <h4 class="font-semibold text-gray-800">Quality First</h4>
+            <p class="text-sm text-gray-600">
+Premium materials, advanced techniques, and strict checks for top-class machines
+            </p>
           </div>
         </div>
 
-        <!-- Button -->
-        <div class="mt-8">
-          <a href="about.html"
-            class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold shadow hover:bg-blue-700 transition">
-            Learn More →
+        <!-- Tailor-Made Solutions -->
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 bg-purple-100 text-purple-600 flex items-center justify-center rounded-full text-lg font-bold">
+            2
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800">Tailor-Made Solutions</h4>
+            <p class="text-sm text-gray-600">
+Customized to your space, workflow, and operational needs.            </p>
+          </div>
+        </div>
+
+        <!-- Reliable Support -->
+        <div class="flex items-start space-x-4">
+          <div class="w-10 h-10 bg-green-100 text-green-600 flex items-center justify-center rounded-full text-lg font-bold">
+            3
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-800">Reliable Support</h4>
+            <p class="text-sm text-gray-600">
+             Service, spare parts, and technical help to keep you running smoothly. </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing -->
+      <p class="text-gray-600 leading-relaxed mt-8">
+        With a growing client base and skilled engineers, we promise quality, reliability, and support that lasts well beyond installation.
+
+      <!-- Button -->
+      <div class="mt-8">
+        <a href="about.html"
+          class="inline-block px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold shadow hover:bg-blue-700 transition">
+          Learn More →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+
+<!-- Counter Section (keep your HTML - example shown) -->
+<section id="counter-section" class="bg-white py-24">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold text-slate-900">
+        Our Impact in Numbers
+      </h2>
+      <p class="mt-4 text-lg text-gray-600">
+        Trusted across industries — delivering results with expert teams and satisfied customers.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition" data-aos="fade-up">
+        <h3 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 counter" data-target="850" aria-live="polite">0+</h3>
+        <p class="mt-3 text-lg text-gray-700">Projects Completed</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 counter" data-target="120" aria-live="polite">0+</h3>
+        <p class="mt-3 text-lg text-gray-700">Expert Workers</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 counter" data-target="580" aria-live="polite">0+</h3>
+        <p class="mt-3 text-lg text-gray-700">Happy Customers</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AOS + Fixed Counter Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Init AOS if present
+  if (window.AOS) AOS.init({ once: true, duration: 1000 });
+
+  const counters = document.querySelectorAll('.counter');
+  if (!counters || counters.length === 0) return;
+
+  const animateCounter = (el, target) => {
+    const start = 0;
+    const duration = 1400; // ms
+    const startTime = performance.now();
+
+    const easeOutQuad = t => t * (2 - t);
+
+    const frame = (now) => {
+      const elapsed = Math.max(0, now - startTime);
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeOutQuad(progress);
+      const current = Math.floor(start + (target - start) * eased);
+      el.textContent = current + '+';
+      if (progress < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        el.textContent = target + '+';
+      }
+    };
+    requestAnimationFrame(frame);
+  };
+
+  // Utility: safely parse numeric target from data-target (strip non-digits)
+  const parseTarget = (raw) => {
+    if (raw == null) return 0;
+    const cleaned = String(raw).replace(/[^0-9.-]+/g, '');
+    const n = Number(cleaned);
+    return Number.isFinite(n) ? Math.abs(Math.round(n)) : 0;
+  };
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseTarget(el.getAttribute('data-target'));
+          animateCounter(el, target);
+          observer.unobserve(el); // run once per element
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(c => io.observe(c));
+  } else {
+    // fallback: check on scroll/load
+    const runOnView = () => {
+      counters.forEach(c => {
+        if (c.dataset.ran) return;
+        const rect = c.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const target = parseTarget(c.getAttribute('data-target'));
+          animateCounter(c, target);
+          c.dataset.ran = 'true';
+        }
+      });
+    };
+    window.addEventListener('scroll', runOnView, { passive: true });
+    runOnView();
+  }
+});
+</script>
+
+
+
+
+
+
+
+
+<!-- Product Categories Section -->
+<section class="py-20 bg-white" id="product-categories">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Heading -->
+    <div class="text-center mb-8">
+      <h2 class="text-3xl font-bold text-gray-900 mb-2">
+        Explore Our Product Categories&nbsp;
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
+          Hydraulics!
+        </span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        Discover our comprehensive range of hydraulic equipment and specialized engineering machinery built for diverse industrial needs.
+      </p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12" id="category-tabs">
+      <button data-category="baling" class="px-5 py-2 rounded-full border border-blue-500 text-blue-500 font-medium bg-blue-50 active-tab">
+        Hydraulic Baling Presses
+      </button>
+      <button data-category="lifting" class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 font-medium hover:bg-gray-100">
+        Lifting Systems
+      </button>
+      <button data-category="cylinders" class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 font-medium hover:bg-gray-100">
+        Hydraulic Cylinders
+      </button>
+      <button data-category="shredders" class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 font-medium hover:bg-gray-100">
+        Shredders
+      </button>
+      <button data-category="conveyors" class="px-5 py-2 rounded-full border border-gray-300 text-gray-700 font-medium hover:bg-gray-100">
+        Conveyors
+      </button>
+    </div>
+
+    <!-- Cards Container -->
+    <div id="category-content" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Cards will be inserted here dynamically -->
+    </div>
+
+    <!-- View All Button -->
+    <div class="text-center mt-12">
+      <a href="products.html" class="bg-white border border-[#0080fc] text-[#0080fc] px-6 py-3 rounded-full font-medium hover:bg-[#0080fc] hover:text-white transition inline-block">
+        View All Products
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+// Example product data for each category
+const products = {
+  baling: [
+    {
+      title: "Vertical Baling Machine",
+      img: "./assets/products/vertical_bailing_machine.png",
+      desc: "Double Cylinder, Vertical & Continuous Scrap Baling Presses.",
+    },
+    {
+      title: "Metal Scrap Baling Press",
+      img: "./assets/products/vertical_bailing_machine.png",
+      desc: "Heavy-duty metallic scrap compaction solutions.",
+    }
+  ],
+  lifting: [
+    {
+      title: "Goods Lift",
+      img: "./assets/products/lifiting_machine.png",
+      desc: "Industrial-grade goods lift with safety mechanisms.",
+    },
+    {
+      title: "Scissor Lift",
+      img: "./assets/products/lifiting_machine.png",
+      desc: "High-load scissor lift for elevation tasks.",
+    }
+  ],
+  cylinders: [
+    {
+      title: "Hydraulic Cylinder",
+      img: "./assets/products/hydarulics_systems.png",
+      desc: "Reliable hydraulic cylinders for power and control.",
+    },
+    {
+      title: "Hydraulic Power Pack",
+      img: "./assets/products/hydarulics_systems.png",
+      desc: "Compact & efficient hydraulic power packs.",
+    }
+  ],
+  shredders: [
+    {
+      title: "Industrial Shredder",
+      img: "./assets/products/special_purpose_machines.png",
+      desc: "Heavy-duty shredders for industrial waste processing.",
+    }
+  ],
+  conveyors: [
+    {
+      title: "Belt Conveyor",
+      img: "./assets/products/waste_management.png",
+      desc: "Durable conveyors for industrial material handling.",
+    }
+  ]
+};
+
+// Function to render products
+function renderProducts(category) {
+  const container = document.getElementById("category-content");
+  container.innerHTML = "";
+
+  products[category].forEach(prod => {
+    const card = document.createElement("div");
+    card.className = "bg-white rounded-2xl shadow-lg hover:shadow-black/30 transition-shadow duration-300 overflow-hidden group relative";
+    card.innerHTML = `
+      <div class="relative h-64 overflow-hidden">
+        <img src="${prod.img}" alt="${prod.title}" class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-gradient-to-l from-[#0080fc]/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+      </div>
+      <div class="p-6 text-center">
+        <h3 class="text-xl font-bold text-gray-900 mb-2">${prod.title}</h3>
+        <p class="text-gray-600 text-sm mb-6">${prod.desc}</p>
+        <div class="flex justify-center gap-4">
+          <a href="tel:8308830595" class="bg-[#0080fc] text-white px-5 py-2 rounded-full font-medium shadow hover:bg-blue-700 transition inline-flex items-center gap-2">
+            <i class="ri-phone-line text-lg"></i> Inquire
+          </a>
+          <a href="products.html" class="border border-[#0080fc] text-[#0080fc] px-5 py-2 rounded-full font-medium hover:bg-[#0080fc] hover:text-white transition inline-flex items-center gap-2">
+            Learn More <i class="ri-arrow-right-line text-lg"></i>
           </a>
         </div>
       </div>
-    </div>
-  </section>
+    `;
+    container.appendChild(card);
+  });
+}
+
+// Tab switching
+document.querySelectorAll("#category-tabs button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("#category-tabs button").forEach(b => {
+      b.classList.remove("border-blue-500","text-blue-500","bg-blue-50","active-tab");
+      b.classList.add("border-gray-300","text-gray-700");
+    });
+    btn.classList.add("border-blue-500","text-blue-500","bg-blue-50","active-tab");
+    renderProducts(btn.dataset.category);
+  });
+});
+
+// Default load (Hydraulic Baling Presses)
+renderProducts("baling");
+</script>
 
 
 
-  <!-- Counter Section -->
-  <section class="bg-white py-24" id="counter-section">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <div class="text-center mb-16">
-        <!-- Main Heading -->
-        <h2 class="text-4xl font-extrabold text-black">
-          Our Impact in Numbers
-        </h2>
-
-        <!-- Subheadline -->
-        <p class="mt-4 text-lg text-blue-800">
-          Trusted by clients across industries for over 25+ years of hydraulic excellence.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        <!-- Card 1 -->
-        <div class="bg-white p-10 rounded-xl shadow-sm border hover:shadow-md transition duration-300"
-          data-aos="fade-up">
-          <h3 class="text-5xl font-bold text-blue-600 counter" data-target="7">0+</h3>
-          <p class="mt-3 text-lg text-gray-600">Years of Experience</p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="bg-white p-10 rounded-xl shadow-sm border hover:shadow-md transition duration-300"
-          data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-5xl font-bold text-blue-600 counter" data-target="580">0+</h3>
-          <p class="mt-3 text-lg text-gray-600">Happy Clients</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="bg-white p-10 rounded-xl shadow-sm border hover:shadow-md transition duration-300"
-          data-aos="fade-up" data-aos-delay="200">
-          <h3 class="text-5xl font-bold text-blue-600 counter" data-target="850">0+</h3>
-          <p class="mt-3 text-lg text-gray-600">Projects Delivered</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- AOS + Scroll Counter Scripts -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({ once: true, duration: 1000 });
-
-    const counters = document.querySelectorAll('.counter');
-    let triggered = false;
-
-    function isInViewport(el) {
-      const rect = el.getBoundingClientRect();
-      return rect.top < window.innerHeight && rect.bottom > 0;
-    }
-
-    function runCounters() {
-      const section = document.getElementById("counter-section");
-      if (!triggered && isInViewport(section)) {
-        counters.forEach(counter => {
-          const target = +counter.getAttribute('data-target');
-          let count = 0;
-          const increment = target / 200;
-
-          const update = () => {
-            if (count < target) {
-              count += increment;
-              counter.innerText = Math.ceil(count) + "+";
-              requestAnimationFrame(update);
-            } else {
-              counter.innerText = target + "+";
-            }
-          };
-          update();
-        });
-        triggered = true;
-      } else if (!isInViewport(section)) {
-        triggered = false;
-        counters.forEach(counter => counter.innerText = "0+");
-      }
-    }
-
-    window.addEventListener('scroll', runCounters);
-  </script>
 
 
-  <!-- Product Categories Section -->
-  <section class="py-20 bg-white" id="product-categories">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Heading -->
-      <div class="text-center mb-16">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">
-          Explore Our Product Categories&nbsp;
-          <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">
-            Hydraulics!
-          </span>
-        </h2>
-        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-          Discover our comprehensive range of hydraulic equipment and specialized engineering machinery
-          built for diverse industrial needs.
-        </p>
-      </div>
 
-      <!-- Cards Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <!-- Card: Baling Presses -->
-        <div
-          class="bg-white rounded-2xl shadow-lg hover:shadow-black/30 transition-shadow duration-300 overflow-hidden group relative">
-          <div class="relative h-64 overflow-hidden">
-            <img src="./assets/products/vertical_bailing_machine.png" alt="Baling Press"
-              class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
-            <div
-              class="absolute inset-0 bg-gradient-to-l from-[#0080fc]/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-            </div>
-          </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Baling Presses</h3>
-            <p class="text-gray-600 text-sm mb-6">
-              Double Cylinder, Vertical, Continuous & Metallic Scrap Baling Presses designed for optimal
-              waste compaction.
-            </p>
-            <div class="flex justify-center gap-4">
-              <!-- Inquire Button -->
-              <a href="tel:8308830595"
-                class="bg-[#0080fc] text-white px-5 py-2 rounded-full font-medium shadow hover:bg-blue-700 transition inline-flex items-center gap-2">
-                <i class="ri-phone-line text-lg"></i>
-                Inquire
-              </a>
-
-              <!-- Learn More Button with arrow icon -->
-              <a href="about.html"
-                class="border border-[#0080fc] text-[#0080fc] px-5 py-2 rounded-full font-medium hover:bg-[#0080fc] hover:text-white transition inline-flex items-center gap-2">
-                Learn More
-                <i class="ri-arrow-right-line text-lg"></i>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Card: Lifting Solutions -->
-        <div
-          class="bg-white rounded-2xl shadow-lg hover:shadow-black/30 transition-shadow duration-300 overflow-hidden group relative">
-          <div class="relative h-64 overflow-hidden">
-            <img src="./assets/products/lifiting_machine.png" alt="Lifting Solutions"
-              class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
-            <div
-              class="absolute inset-0 bg-gradient-to-l from-[#0080fc]/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-            </div>
-          </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Lifting Solutions</h3>
-            <p class="text-gray-600 text-sm mb-6">
-              Goods Lift, Scissor Lift, Floor Crane – built for industrial-grade elevation and
-              transportation.
-            </p>
-            <div class="flex justify-center gap-4">
-              <!-- Inquire Button -->
-              <a href="tel:8308830595"
-                class="bg-[#0080fc] text-white px-5 py-2 rounded-full font-medium shadow hover:bg-blue-700 transition inline-flex items-center gap-2">
-                <i class="ri-phone-line text-lg"></i>
-                Inquire
-              </a>
-
-              <!-- Learn More Button with arrow icon -->
-              <a href="about.html"
-                class="border border-[#0080fc] text-[#0080fc] px-5 py-2 rounded-full font-medium hover:bg-[#0080fc] hover:text-white transition inline-flex items-center gap-2">
-                Learn More
-                <i class="ri-arrow-right-line text-lg"></i>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Card: Hydraulic Systems -->
-        <div
-          class="bg-white rounded-2xl shadow-lg hover:shadow-black/30 transition-shadow duration-300 overflow-hidden group relative">
-          <div class="relative h-64 overflow-hidden">
-            <img src="./assets/products/hydarulics_systems.png" alt="Hydraulic Systems"
-              class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
-            <div
-              class="absolute inset-0 bg-gradient-to-l from-[#0080fc]/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-            </div>
-          </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Hydraulic Systems</h3>
-            <p class="text-gray-600 text-sm mb-6">
-              Hydraulic Cylinders, Power Packs, Fittings, Seals, Pumps & Valves for reliable power and
-              control.
-            </p>
-            <div class="flex justify-center gap-4">
-              <!-- Inquire Button -->
-              <a href="tel:8308830595"
-                class="bg-[#0080fc] text-white px-5 py-2 rounded-full font-medium shadow hover:bg-blue-700 transition inline-flex items-center gap-2">
-                <i class="ri-phone-line text-lg"></i>
-                Inquire
-              </a>
-
-              <!-- Learn More Button with arrow icon -->
-              <a href="about.html"
-                class="border border-[#0080fc] text-[#0080fc] px-5 py-2 rounded-full font-medium hover:bg-[#0080fc] hover:text-white transition inline-flex items-center gap-2">
-                Learn More
-                <i class="ri-arrow-right-line text-lg"></i>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Card: Special Purpose Machines -->
-        <div
-          class="bg-white rounded-2xl shadow-lg hover:shadow-black/30 transition-shadow duration-300 overflow-hidden group relative">
-          <div class="relative h-64 overflow-hidden">
-            <img src="./assets/products/special_purpose_machines.png" alt="Special Purpose Machines"
-              class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
-            <div
-              class="absolute inset-0 bg-gradient-to-l from-[#0080fc]/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-            </div>
-          </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Special Purpose Machines</h3>
-            <p class="text-gray-600 text-sm mb-6">
-              Customized solutions including Paper Plate Machines, Workshop Presses, Rubber Moulding
-              Presses.
-            </p>
-            <div class="flex justify-center gap-4">
-              <!-- Inquire Button -->
-              <a href="tel:8308830595"
-                class="bg-[#0080fc] text-white px-5 py-2 rounded-full font-medium shadow hover:bg-blue-700 transition inline-flex items-center gap-2">
-                <i class="ri-phone-line text-lg"></i>
-                Inquire
-              </a>
-
-              <!-- Learn More Button with arrow icon -->
-              <a href="about.html"
-                class="border border-[#0080fc] text-[#0080fc] px-5 py-2 rounded-full font-medium hover:bg-[#0080fc] hover:text-white transition inline-flex items-center gap-2">
-                Learn More
-                <i class="ri-arrow-right-line text-lg"></i>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Card: Waste & Utility Equipment -->
-        <div
-          class="bg-white rounded-2xl shadow-lg hover:shadow-black/30 transition-shadow duration-300 overflow-hidden group relative">
-          <div class="relative h-64 overflow-hidden">
-            <img src="./assets/products/waste_management.png" alt="Waste Equipment"
-              class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
-            <div
-              class="absolute inset-0 bg-gradient-to-l from-[#0080fc]/30 to-transparent opacity-0 group-hover:opacity-100 transition duration-300">
-            </div>
-          </div>
-          <div class="p-6 text-center">
-            <h3 class="text-xl font-bold text-gray-900 mb-2">Waste & Utility Equipment</h3>
-            <p class="text-gray-600 text-sm mb-6">
-              Garbage Hoppers, Tippers, Dock Levellers & Gantries for facility efficiency and safety.
-            </p>
-            <div class="flex justify-center gap-4">
-              <!-- Inquire Button -->
-              <a href="tel:8308830595"
-                class="bg-[#0080fc] text-white px-5 py-2 rounded-full font-medium shadow hover:bg-blue-700 transition inline-flex items-center gap-2">
-                <i class="ri-phone-line text-lg"></i>
-                Inquire
-              </a>
-
-              <!-- Learn More Button with arrow icon -->
-              <a href="about.html"
-                class="border border-[#0080fc] text-[#0080fc] px-5 py-2 rounded-full font-medium hover:bg-[#0080fc] hover:text-white transition inline-flex items-center gap-2">
-                Learn More
-                <i class="ri-arrow-right-line text-lg"></i>
-              </a>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-      <!-- View All Button -->
-      <div class="text-center mt-12">
-        <a href="products.html"
-          class="bg-white border border-[#0080fc] text-[#0080fc] px-6 py-3 rounded-button font-medium hover:bg-[#0080fc] hover:text-white transition inline-block">
-          View All Products
-        </a>
-      </div>
-
-    </div>
-  </section>
 
 
   <!-- About Us Section -->
@@ -846,6 +926,170 @@
 
 
 
+
+
+
+
+
+<!-- Compact One-way Auto Scrolling Industries Slider (dashboard-friendly) -->
+<section class="bg-pattern py-6"> <!-- reduced vertical padding -->
+  <div class="w-full px-2"> <!-- full width, minimal horizontal padding for dashboard -->
+   <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-2">
+          Industries  <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">We Serve </span>
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          We pride ourselves on quality, service, and long-standing relationships in the hydraulics industry.
+        </p>
+      </div>
+
+    <div class="relative overflow-hidden">
+      <!-- Arrows (smaller) -->
+      <div class="absolute right-2 top-2 z-30 flex flex-col gap-2">
+        <button id="prevBtn" aria-label="prev" class="w-9 h-9 bg-white/95 rounded shadow flex items-center justify-center hover:bg-white">
+          <svg class="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M15 18l-6-6 6-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button id="nextBtn" aria-label="next" class="w-9 h-9 bg-white/95 rounded shadow flex items-center justify-center hover:bg-white">
+          <svg class="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M9 6l6 6-6 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+
+      <!-- Slider track (duplicate items for seamless loop) -->
+      <div class="slider-track flex gap-3 will-change-transform">
+        <!-- Slide (example) - repeat/replace as needed -->
+        <article class="slide min-w-[260px] md:min-w-[300px] lg:min-w-[360px] h-40 md:h-48 lg:h-56 flex-shrink-0 relative rounded-sm overflow-hidden">
+          <img src="/assets/hero/arc-welding-steel-construction-site.jpg" alt="Jumbo Bag" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-blue-600/80 to-transparent"></div>
+          <h3 class="absolute left-3 bottom-3 text-white text-sm md:text-base font-semibold drop-shadow-md">Jumbo Bag</h3>
+        </article>
+
+        <article class="slide min-w-[260px] md:min-w-[300px] lg:min-w-[360px] h-40 md:h-48 lg:h-56 flex-shrink-0 relative rounded-sm overflow-hidden">
+          <img src="/assets/hero/modern-operational-plant-equipment-assembly-line-producing-fiberglass-batt-heavy-industry-machinery-metalworking-workshop-concept.jpg" alt="Metal Industry" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-blue-600/80 to-transparent"></div>
+          <h3 class="absolute left-3 bottom-3 text-white text-sm md:text-base font-semibold drop-shadow-md">Metal Industry</h3>
+        </article>
+
+        <article class="slide min-w-[260px] md:min-w-[300px] lg:min-w-[360px] h-40 md:h-48 lg:h-56 flex-shrink-0 relative rounded-sm overflow-hidden">
+          <img src="/assets/hero/wheel-loader-transporting-municipal-waste-waste-treatment-plant.jpg" alt="Municipal Waste" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-blue-600/80 to-transparent"></div>
+          <h3 class="absolute left-3 bottom-3 text-white text-sm md:text-base font-semibold drop-shadow-md">Municipal Waste</h3>
+        </article>
+
+        <article class="slide min-w-[260px] md:min-w-[300px] lg:min-w-[360px] h-40 md:h-48 lg:h-56 flex-shrink-0 relative rounded-sm overflow-hidden">
+          <img src="/assets/hero/multiple-cubes-compressed-plastic-garbage-near-waste-recycling-factory.jpg" alt="Paper Industry" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-blue-600/80 to-transparent"></div>
+          <h3 class="absolute left-3 bottom-3 text-white text-sm md:text-base font-semibold drop-shadow-md">Paper Industry</h3>
+        </article>
+
+        <!-- Duplicate set starts here (same items) for seamless infinite animation) -->
+        <article class="slide min-w-[260px] md:min-w-[300px] lg:min-w-[360px] h-40 md:h-48 lg:h-56 flex-shrink-0 relative rounded-sm overflow-hidden">
+          <img src="/assets/hero/arc-welding-steel-construction-site.jpg" alt="Jumbo Bag" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-blue-600/80 to-transparent"></div>
+          <h3 class="absolute left-3 bottom-3 text-white text-sm md:text-base font-semibold drop-shadow-md">Jumbo Bag</h3>
+        </article>
+
+        <article class="slide min-w-[260px] md:min-w-[300px] lg:min-w-[360px] h-40 md:h-48 lg:h-56 flex-shrink-0 relative rounded-sm overflow-hidden">
+          <img src="/assets/hero/modern-operational-plant-equipment-assembly-line-producing-fiberglass-batt-heavy-industry-machinery-metalworking-workshop-concept.jpg" alt="Metal Industry" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-blue-600/80 to-transparent"></div>
+          <h3 class="absolute left-3 bottom-3 text-white text-sm md:text-base font-semibold drop-shadow-md">Metal Industry</h3>
+        </article>
+
+        <article class="slide min-w-[260px] md:min-w-[300px] lg:min-w-[360px] h-40 md:h-48 lg:h-56 flex-shrink-0 relative rounded-sm overflow-hidden">
+          <img src="/assets/hero/wheel-loader-transporting-municipal-waste-waste-treatment-plant.jpg" alt="Municipal Waste" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-blue-600/80 to-transparent"></div>
+          <h3 class="absolute left-3 bottom-3 text-white text-sm md:text-base font-semibold drop-shadow-md">Municipal Waste</h3>
+        </article>
+
+        <article class="slide min-w-[260px] md:min-w-[300px] lg:min-w-[360px] h-40 md:h-48 lg:h-56 flex-shrink-0 relative rounded-sm overflow-hidden">
+          <img src="/assets/hero/multiple-cubes-compressed-plastic-garbage-near-waste-recycling-factory.jpg" alt="Paper Industry" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-blue-600/80 to-transparent"></div>
+          <h3 class="absolute left-3 bottom-3 text-white text-sm md:text-base font-semibold drop-shadow-md">Paper Industry</h3>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compact styles (add to your CSS) -->
+<style>
+  .slider-track {
+    display: flex;
+    gap: 0.75rem;
+    align-items: stretch;
+    animation: scroll-left 20s linear infinite; /* faster for dashboard */
+    will-change: transform;
+  }
+
+  .slider-track:hover { animation-play-state: paused; }
+  @keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* move by duplicate set */
+  }
+
+  .relative.overflow-hidden { -webkit-overflow-scrolling: touch; }
+  .slide img { display:block; width:100%; height:100%; object-fit:cover; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+</style>
+
+<!-- Compact JS for Prev/Next (tuned for smaller slides) -->
+<script>
+  (function(){
+    const track = document.querySelector('.slider-track');
+    const prev = document.getElementById('prevBtn');
+    const next = document.getElementById('nextBtn');
+    // step tuned to smaller slide width (adjust if you change min-w)
+    const step = 320; // px
+
+    function pauseAnim(ms=1500){
+      track.style.animationPlayState = 'paused';
+      setTimeout(()=> track.style.animationPlayState = 'running', ms);
+    }
+
+    next.addEventListener('click', () => {
+      track.scrollBy({ left: step, behavior: 'smooth' });
+      pauseAnim(1800);
+    });
+
+    prev.addEventListener('click', () => {
+      track.scrollBy({ left: -step, behavior: 'smooth' });
+      pauseAnim(1800);
+    });
+
+    let userInteracting = false;
+    track.addEventListener('pointerdown', () => {
+      userInteracting = true;
+      track.style.animationPlayState = 'paused';
+    });
+    track.addEventListener('pointerup', () => {
+      userInteracting = false;
+      setTimeout(()=> { if(!userInteracting) track.style.animationPlayState = 'running'; }, 800);
+    });
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="p-10">
+  <img src="/assets/hero/map.svg" alt="Hero Image" 
+       class="w-[90%] mx-auto object-cover">
+</div>
+
+
+
+
+
+
+
   <!-- Contact Section -->
   <section id="contact" class="bg-white text-gray-800 py-20 px-6">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -1063,5 +1307,3 @@
 </body>
 
 </html>
- 
- 
